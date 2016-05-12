@@ -1,0 +1,15 @@
+--------------------------------------------------------
+--  File created - donderdag-mei-12-2016   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Procedure EPRINT
+--------------------------------------------------------
+set define off;
+
+  CREATE OR REPLACE EDITIONABLE PROCEDURE "EPRINT" 
+(
+  TEXT IN VARCHAR2 
+) AS 
+BEGIN
+  dbms_output.put_line(TEXT);
+END EPRINT;

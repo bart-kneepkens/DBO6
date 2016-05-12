@@ -1,0 +1,8 @@
+-- Try to insert too short value
+INSERT INTO PERSOON VALUES ('BART', '111222');
+
+-- Try to insert a invalid number
+INSERT INTO PERSOON VALUES ('BART', '111225676');
+
+-- Try to insert a valid number
+INSERT INTO PERSOON VALUES ('BART', '111222333');

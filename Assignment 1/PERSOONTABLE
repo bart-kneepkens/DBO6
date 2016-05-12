@@ -1,0 +1,25 @@
+--------------------------------------------------------
+--  File created - donderdag-mei-12-2016   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Table PERSOON
+--------------------------------------------------------
+
+  CREATE TABLE "PERSOON" 
+   (	"NAAM" VARCHAR2(40), 
+	"BSN" VARCHAR2(9)
+   )
+--------------------------------------------------------
+--  DDL for Index PERSOON_PK
+--------------------------------------------------------
+
+  CREATE UNIQUE INDEX "PERSOON_PK" ON "PERSOON" ("BSN")
+--------------------------------------------------------
+--  Constraints for Table PERSOON
+--------------------------------------------------------
+
+  ALTER TABLE "PERSOON" MODIFY ("NAAM" NOT NULL ENABLE)
+  ALTER TABLE "PERSOON" MODIFY ("BSN" NOT NULL ENABLE)
+  ALTER TABLE "PERSOON" ADD CONSTRAINT "PERSOON_PK" PRIMARY KEY ("BSN")
+  USING INDEX  ENABLE
+

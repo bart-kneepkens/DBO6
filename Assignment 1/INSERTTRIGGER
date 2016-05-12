@@ -1,0 +1,25 @@
+--------------------------------------------------------
+--  File created - donderdag-mei-12-2016   
+--------------------------------------------------------
+--------------------------------------------------------
+--  DDL for Trigger INSERTTRIGGER
+--------------------------------------------------------
+
+  CREATE OR REPLACE EDITIONABLE TRIGGER "INSERTTRIGGER" 
+BEFORE INSERT ON PERSOON
+REFERENCING NEW AS ORIGINAL
+FOR EACH ROW
+DECLARE
+
+BEGIN
+ IF LENGTH(:ORIGINAL.BSN) = 9 THEN
+    IF ELFPROEF(:ORIGINAL.BSN) = 1 THEN
+        EPRINT('BSN VALID: ' || :ORIGINAL.BSN);
+    ELSE
+        RAISE_APPLICATION_ERROR(-20002, 'INVALID BSN');
+    END IF;
+ ELSE
+ RAISE_APPLICATION_ERROR(-20001, 'INVALID BSN LENGTH.');
+ END IF;
+END;
+ALTER TRIGGER "INSERTTRIGGER" ENABLE
