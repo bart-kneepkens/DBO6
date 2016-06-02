@@ -34,7 +34,7 @@ BEGIN
    job_type        => 'PLSQL_BLOCK',       -- see oracle documentation on types --
    job_action      => 'BEGIN GET_WEATHER; END;',
    start_date      => SYSDATE,
-   repeat_interval => 'FREQ=MINUTELY;BYMINUTE=10',    -- every 10 minutes.
+   repeat_interval => 'FREQ=MINUTELY;INTERVAL=10',    -- every 10 minutes.
    end_date        => NULL, 
    enabled         => TRUE,
    comments        => '');
