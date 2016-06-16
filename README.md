@@ -16,3 +16,8 @@ Assignment 3
 ----
 The goal of this asssignment is to create a procedure that calls a webservice. Then it should insert these values in a table.
 Extra : This procedure gets called periodically.
+
+Assignment 4
+----
+The goal of this assignment is to demonstrate query-optimisation.
+Note: This assignment is in Dutch.
